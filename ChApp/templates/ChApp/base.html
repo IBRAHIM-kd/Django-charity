@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>{% block title %}Charity for All{% endblock %}</title>
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Helpthem All" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+  <link rel="shortcut icon" type="image/png" href="{% static 'images/Child.png' %}"/>
+  <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+<!-- //js -->
+<link rel="stylesheet" href="{% static 'css/flexslider.css' %}" type="text/css" media="screen" property="" />
+<!-- gallery -->
+<link rel="stylesheet" href="{% static 'css/lightGallery.css' %}" type="text/css" media="all" />
+<!-- //gallery -->
+<!-- font-awesome-icons -->
+<link href="{% static 'css/font-awesome.css' %}" rel="stylesheet"> 
+<!-- //font-awesome-icons -->
+<link href="//fonts.googleapis.com/css?family=Gentium+Basic:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+</head>
+	
+<body>
+
+{% block body %}
+{% endblock %}
+
+<!-- //footer --> 
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="{% static  'js/move-top.js' %}"></script>
+<script type="text/javascript" src="{% static  'js/easing.js' %}"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+<!-- for bootstrap working -->
+	<script src="{% static  'js/bootstrap.min.js' %}"></script>
+<!-- //for bootstrap working -->
+<!-- menu-plugin -->
+<script type="text/javascript" src="{% static  'js/gnmenu.js' %}"></script>	
+<!-- //menu-plugin -->
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+								
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+	</script>
+<!-- //here ends scrolling icon -->
+
+</body>
+</html>
